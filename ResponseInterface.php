@@ -16,17 +16,17 @@ interface ResponseInterface
     /**
      * @return bool
      */
-    public function isSuccess();
+    public function isSuccess(): bool;
 
     /**
      * @return bool
      */
-    public function isRedirect();
+    public function isRedirect(): bool;
 
     /**
      * @return bool
      */
-    public function isCancelled();
+    public function isCancelled(): bool;
 
     /**
      * @return string

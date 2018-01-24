@@ -11,8 +11,13 @@ declare(strict_types=1);
 
 namespace Mindy\Payment;
 
+use Symfony\Component\HttpFoundation\Request;
+
 /**
  * Interface GatewayInterface.
+ *
+ * @method ResponseInterface validate(Request $request)
+ * @method ResponseInterface complete(PurchaseParameters $parameters)
  */
 interface GatewayInterface
 {

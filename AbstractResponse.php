@@ -26,25 +26,4 @@ abstract class AbstractResponse implements ResponseInterface
     {
         $this->response = $response;
     }
-
-    public function dump()
-    {
-        dump((string) $this->response->getBody());
-        die;
-    }
-
-    /**
-     * @return bool
-     */
-    abstract public function isSuccess();
-
-    /**
-     * @return bool
-     */
-    abstract public function isRedirect();
-
-    /**
-     * @return bool
-     */
-    abstract public function isCancelled();
 }

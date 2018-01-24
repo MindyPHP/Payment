@@ -14,31 +14,31 @@ namespace Mindy\Payment;
 class OfflinePurchaseResponse implements ResponseInterface
 {
     /**
-     * @return bool
+     * {@inheritdoc}
      */
-    public function isSuccess()
+    public function isSuccess(): bool
     {
         return false;
     }
 
     /**
-     * @return bool
+     * {@inheritdoc}
      */
-    public function isRedirect()
+    public function isRedirect(): bool
     {
         return false;
     }
 
     /**
-     * @return bool
+     * {@inheritdoc}
      */
-    public function isCancelled()
+    public function isCancelled(): bool
     {
         return false;
     }
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function getError()
     {
@@ -46,7 +46,7 @@ class OfflinePurchaseResponse implements ResponseInterface
     }
 
     /**
-     * @return string
+     * {@inheritdoc}
      */
     public function getRedirectUrl()
     {
