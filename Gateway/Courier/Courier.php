@@ -14,8 +14,15 @@ namespace Mindy\Payment\Gateway\Courier;
 use Mindy\Payment\AbstractGateway;
 use Mindy\Payment\OfflineGatewayInterface;
 use Mindy\Payment\OfflinePurchaseResponse;
+use Mindy\Payment\PurchaseParameters;
 use Mindy\Payment\PurchaseParametersInterface;
+use Mindy\Payment\ResponseInterface;
+use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * @method ResponseInterface validate(Request $request)
+ * @method ResponseInterface complete(PurchaseParameters $parameters)
+ */
 class Courier extends AbstractGateway implements OfflineGatewayInterface
 {
     /**
